@@ -39,9 +39,13 @@ createApp({
 
             createTask() {
 
-                  this.toDoList.push(this.newTask);
-                  console.log(this.toDoList);
-                  this.newTask = '';
+                  if(this.newTask.text != '') {
+                        
+                        this.toDoList.push({...this.newTask});
+                        console.log(this.toDoList);
+                        this.newTask.text = '';
+
+                  }
                   
             }
 
