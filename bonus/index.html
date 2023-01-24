@@ -29,7 +29,7 @@
 
                   <div class="tasks-container">
                         <ul>
-                              <li class="task" v-for="(task, index) in toDoList" :class="(task.done == true) ? 'line-through' : '' ">
+                              <li @click="invertDone(index)" class="task" v-for="(task, index) in toDoList" :class="(task.done == true) ? 'line-through' : '' ">
                                     {{ task.text }}
 
                                     <i class="fas fa-times" @click="eraseTask(index)"></i>
