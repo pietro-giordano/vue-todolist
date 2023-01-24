@@ -28,8 +28,9 @@
 
                   <div class="tasks-container">
                         <ul>
-                              <li class="task">
-                                    
+                              <li class="task" v-for="task in toDoList" :class="(task.done == true) ? 'line-through' : '' ">
+                                    {{ task.text }}
+
                                     <i class="fas fa-times"></i>
                               </li>
                         </ul>
