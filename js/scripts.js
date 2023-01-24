@@ -26,7 +26,12 @@ createApp({
 
       methods: {
             
+            eraseTask(index) {
 
+                  this.toDoList.splice(index, 1);
+                  console.log(this.toDoList);
+
+            }
 
       },
 
