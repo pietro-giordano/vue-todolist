@@ -16,10 +16,14 @@ createApp({
                               text: 'Lavare pavimento',
                               done: false
                         }, {
-                              text: 'Palestra',
+                              text: 'Allenarsi in palestra',
                               done: false
                         },
                   ],
+                  newTask: {
+                        text: '',
+                        done: false
+                  }
             };
 
       },
@@ -31,6 +35,14 @@ createApp({
                   this.toDoList.splice(index, 1);
                   console.log(this.toDoList);
 
+            },
+
+            createTask() {
+
+                  this.toDoList.push(this.newTask);
+                  console.log(this.toDoList);
+                  this.newTask = '';
+                  
             }
 
       },

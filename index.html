@@ -20,9 +20,9 @@
                   </div>
 
                   <div class="new-task">
-                        <input type="text" placeholder="New task">
-                        
-                        <button>
+                        <input v-model="newTask.text" type="text" placeholder="New task">
+
+                        <button @click="createTask">
                               Add task
                         </button>
                   </div>
